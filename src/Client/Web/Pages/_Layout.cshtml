@@ -49,7 +49,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="The BitIosPwaSplashTest is built with ASP.NET Core, Identity, Web API, and EF Core for the server-side, and Blazor for the client-side. It allows you to build Android, iOS, Windows, and Web applications from a single codebase." />
     <link rel="icon" href="~/favicon.ico" type="image/x-icon" asp-append-version="@useAspAppendVersion">
-    <component type="typeof(HeadOutlet)" render-mode="@renderMode" /><!-- iOS/iPadOS Splash Screens -->
+    <component type="typeof(HeadOutlet)" render-mode="@renderMode" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <!-- iOS/iPadOS Splash Screens -->
     <link rel="apple-touch-startup-image" media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="images/splash_screens/iPhone_14_Pro_Max_landscape.png">
     <link rel="apple-touch-startup-image" media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="images/splash_screens/iPhone_14_Pro_landscape.png">
     <link rel="apple-touch-startup-image" media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="images/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png">

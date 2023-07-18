@@ -33,113 +33,113 @@ jobs:
     - name: Build
       run: dotnet build src/Client/Web/BitIosPwaSplashTest.Client.Web.csproj -p:Configuration=Release -p:WebAppDeploymentType="${{ env.WEB_APP_DEPLOYMENT_TYPE }}"
 
-  build_blazor_hybrid_android:
-    name: build blazor hybrid (android)
-    runs-on: windows-latest
+  # build_blazor_hybrid_android:
+  #   name: build blazor hybrid (android)
+  #   runs-on: windows-latest
 
-    steps:
+  #   steps:
     
-    - name: Checkout source code
-      uses: actions/checkout@v3
+  #   - name: Checkout source code
+  #     uses: actions/checkout@v3
     
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        global-json-file: global.json
+  #   - name: Setup .NET
+  #     uses: actions/setup-dotnet@v3
+  #     with:
+  #       global-json-file: global.json
 
-    - uses: actions/setup-node@v3
-      with:
-        node-version: latest
+  #   - uses: actions/setup-node@v3
+  #     with:
+  #       node-version: latest
 
-    - name: Install Maui
-      run: dotnet workload install maui
+  #   - name: Install Maui
+  #     run: dotnet workload install maui
 
-    - name: Restore workloads
-      run: dotnet workload restore src/Client/App/BitIosPwaSplashTest.Client.App.csproj -p:BlazorMode=BlazorHybrid -f net7.0-android
+  #   - name: Restore workloads
+  #     run: dotnet workload restore src/Client/App/BitIosPwaSplashTest.Client.App.csproj -p:BlazorMode=BlazorHybrid -f net7.0-android
 
-    - name: Build
-      run: dotnet build src/Client/App/BitIosPwaSplashTest.Client.App.csproj -p:RunAOTCompilation=false -p:BlazorMode=BlazorHybrid -p:Configuration=Release -f net7.0-android
+  #   - name: Build
+  #     run: dotnet build src/Client/App/BitIosPwaSplashTest.Client.App.csproj -p:RunAOTCompilation=false -p:BlazorMode=BlazorHybrid -p:Configuration=Release -f net7.0-android
 
-  build_blazor_hybrid_windows:
-    name: build blazor hybrid (windows)
-    runs-on: windows-latest
+  # build_blazor_hybrid_windows:
+  #   name: build blazor hybrid (windows)
+  #   runs-on: windows-latest
 
-    steps:
+  #   steps:
     
-    - name: Checkout source code
-      uses: actions/checkout@v3
+  #   - name: Checkout source code
+  #     uses: actions/checkout@v3
     
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        global-json-file: global.json
+  #   - name: Setup .NET
+  #     uses: actions/setup-dotnet@v3
+  #     with:
+  #       global-json-file: global.json
 
-    - uses: actions/setup-node@v3
-      with:
-        node-version: latest
+  #   - uses: actions/setup-node@v3
+  #     with:
+  #       node-version: latest
 
-    - name: Install Maui
-      run: dotnet workload install maui
+  #   - name: Install Maui
+  #     run: dotnet workload install maui
 
-    - name: Restore workloads
-      run: dotnet workload restore src/Client/App/BitIosPwaSplashTest.Client.App.csproj -p:BlazorMode=BlazorHybrid -f net7.0-windows10.0.19041.0
+  #   - name: Restore workloads
+  #     run: dotnet workload restore src/Client/App/BitIosPwaSplashTest.Client.App.csproj -p:BlazorMode=BlazorHybrid -f net7.0-windows10.0.19041.0
 
-    - name: Build
-      run: dotnet build src/Client/App/BitIosPwaSplashTest.Client.App.csproj -p:BlazorMode=BlazorHybrid -p:Configuration=Release -f net7.0-windows10.0.19041.0
+  #   - name: Build
+  #     run: dotnet build src/Client/App/BitIosPwaSplashTest.Client.App.csproj -p:BlazorMode=BlazorHybrid -p:Configuration=Release -f net7.0-windows10.0.19041.0
 
-  build_blazor_hybrid_iOS:
-    name: build blazor hybrid (iOS)
-    runs-on: macos-12
+  # build_blazor_hybrid_iOS:
+  #   name: build blazor hybrid (iOS)
+  #   runs-on: macos-12
 
-    steps:
+  #   steps:
     
-    - name: Checkout source code
-      uses: actions/checkout@v3
+  #   - name: Checkout source code
+  #     uses: actions/checkout@v3
     
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        global-json-file: global.json
+  #   - name: Setup .NET
+  #     uses: actions/setup-dotnet@v3
+  #     with:
+  #       global-json-file: global.json
 
-    - uses: actions/setup-node@v3
-      with:
-        node-version: latest
+  #   - uses: actions/setup-node@v3
+  #     with:
+  #       node-version: latest
 
-    - name: Install Maui
-      run: dotnet workload install maui
+  #   - name: Install Maui
+  #     run: dotnet workload install maui
 
-    - name: Restore workloads
-      run: dotnet workload restore src/Client/App/BitIosPwaSplashTest.Client.App.csproj -p:BlazorMode=BlazorHybrid -f net7.0-ios
+  #   - name: Restore workloads
+  #     run: dotnet workload restore src/Client/App/BitIosPwaSplashTest.Client.App.csproj -p:BlazorMode=BlazorHybrid -f net7.0-ios
 
-    - name: Build
-      run: dotnet build src/Client/App/BitIosPwaSplashTest.Client.App.csproj -p:BlazorMode=BlazorHybrid -p:Configuration=Release -f net7.0-ios
+  #   - name: Build
+  #     run: dotnet build src/Client/App/BitIosPwaSplashTest.Client.App.csproj -p:BlazorMode=BlazorHybrid -p:Configuration=Release -f net7.0-ios
 
-  build_blazor_hybrid_maccatalyst:
-    name: build blazor hybrid (maccatalyst)
-    runs-on: macos-latest
+  # build_blazor_hybrid_maccatalyst:
+  #   name: build blazor hybrid (maccatalyst)
+  #   runs-on: macos-latest
 
-    steps:
+  #   steps:
     
-    - name: Checkout source code
-      uses: actions/checkout@v3
+  #   - name: Checkout source code
+  #     uses: actions/checkout@v3
     
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        global-json-file: global.json
+  #   - name: Setup .NET
+  #     uses: actions/setup-dotnet@v3
+  #     with:
+  #       global-json-file: global.json
 
-    - uses: actions/setup-node@v3
-      with:
-        node-version: latest
+  #   - uses: actions/setup-node@v3
+  #     with:
+  #       node-version: latest
 
-    - name: Install Maui
-      run: dotnet workload install maui
+  #   - name: Install Maui
+  #     run: dotnet workload install maui
 
-    - name: Restore workloads
-      run: dotnet workload restore src/Client/App/BitIosPwaSplashTest.Client.App.csproj -p:BlazorMode=BlazorHybrid -f net7.0-maccatalyst
+  #   - name: Restore workloads
+  #     run: dotnet workload restore src/Client/App/BitIosPwaSplashTest.Client.App.csproj -p:BlazorMode=BlazorHybrid -f net7.0-maccatalyst
       
-    - name: Build
-      run: dotnet build src/Client/App/BitIosPwaSplashTest.Client.App.csproj -p:BlazorMode=BlazorHybrid -p:Configuration=Release -f net7.0-maccatalyst
+  #   - name: Build
+  #     run: dotnet build src/Client/App/BitIosPwaSplashTest.Client.App.csproj -p:BlazorMode=BlazorHybrid -p:Configuration=Release -f net7.0-maccatalyst
 
   build_blazor_api_wasm:
     name: build blazor api + web assembly
